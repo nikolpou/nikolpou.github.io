@@ -1,0 +1,15 @@
+{
+    "name": "omistaja/nikolpou.github.io",
+    "autoload": {
+        "psr-4": {
+            "Omistaja\\NikolpouGithubIo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nikolai Poutanen",
+            "email": "2006238@edu.karelia.fi"
+        }
+    ],
+    "require": {}
+}
