@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Portfolio Homepage</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="nav-wrapper">
+        <div class="left-side">
+          <div class="nav-link-wrapper active-nav-link">
+            <a href="index.html">[ Code/Koodi ]</a>
+          </div>
+          <div class="nav-link-wrapper">
+            <a href="palaute.html"> [ Palaute ]</a>
+          </div>
+        </div>
+
+      <div class="right-side">
+        <div class="brand">
+          POKOLAI NIUTANEN
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper"> 
+      <div class="portfolio-items-wrapper">
+
+        <div class="portfolio-item-wrapper">
+          <div class="video-wrapper">
+            <video src="sanakirja.mp4" muted loop autoplay></video>
+          </div>
+
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <h1>Siirrä hiiri videon päälle nähdäksesi lisää</h1> 
+            </div>
+
+            <div class="subtitle">
+              <h1> Sanakirja websovellus.</h1> 
+              <p>Rest api rajapinta.</p> 
+              <p>Toteutettu: html, css, nodeJs, express, json ja tiedostonkäsittely</p>
+              <p>Sovelluksen avulla voidaan poistaa, lisätä ja muokata tietoja tekstitiedostossa.</p>
+              <p></p>
+              <p>Opin tässä projektissa fullstack ohjelmoinnin alkeita.</p>
+              <p>Onnistuin tehtävässä hyvin ja se täyttää vaatimukset.</p>
+              <p>Käyttöliittymässä olisi parantamisen varaa.</p>
+              
+                </div>
+          </div>
+        </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+
+</html>
